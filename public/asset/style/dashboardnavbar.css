@@ -1,0 +1,371 @@
+.ul-style li{
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+
+
+
+.ul-style button{
+    background: none ;
+   border: none;
+
+}
+
+
+
+.burger-button{
+    background: none ;
+    border: none;
+}
+.ul-style a{
+ text-decoration: none;
+ color: white;
+ font-size: 15px;
+
+}
+
+.width{
+    width: 10px;
+}
+
+.home-span{
+    padding-left: 19%;
+}
+.about-span{padding-left: 18%;}
+
+.service-span{
+    padding-left: 11%;
+}
+.portfolio-span{
+    padding-left: 0%;
+}
+.contact-span{
+    padding-left: 6%;
+}
+/* Optional: To ensure consistency after focus is lost */
+.ul-style a.focused {
+    background-color: black; /* Keep the background black even after focus */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and  (max-width: 576px) {
+    .navbarxs {
+        width: 60%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 100vh;
+        background-color: cadetblue;
+        position: fixed;
+        z-index: 5;
+
+
+    }
+
+
+
+    .nav-div-main{
+        display: flex;
+
+        align-items: center;
+
+
+        }
+
+    .navbarxs::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .navbarxs::-webkit-scrollbar-thumb {
+        background: #0B4392;
+        border-radius: 4px;
+    }
+
+
+    .navbarxs::-webkit-scrollbar-thumb:hover {
+        background: #119EB6;
+    }
+
+    .dashboard {
+        width: 100%;
+        position: relative;
+
+    }
+
+    .dashboard-main{
+        position: relative;
+    }
+
+    .burger-div-sidebarxs{
+        width:100%; display:flex; justify-content:end;
+       }
+
+       .nav-div-main{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .burger-show-div{
+        width: 100%;
+          background-color: aqua;
+    /* position: relative; */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    /* position: fixed;
+    z-index: 1; */
+        }
+
+        .burger-div-button{
+            position: relative;
+            left: 50%;
+        }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .navbarsm {
+        width: 40%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 100vh;
+        background-color: cadetblue;
+        position: fixed;
+        z-index: 5;
+
+
+
+    }
+
+    .navsm{
+      display: none !important;
+    }
+
+    .nav-div-main{
+        display: flex;
+
+        align-items: center;
+
+
+        }
+
+    .navbarsm::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .navbarsm::-webkit-scrollbar-thumb {
+        background: #0B4392;
+        border-radius: 4px;
+    }
+
+
+    .navbarsm::-webkit-scrollbar-thumb:hover {
+        background: #119EB6;
+    }
+
+
+    .dashboard {
+        width: 100%;
+
+    }
+
+    .dashboard-main{
+        position: relative;
+
+    }
+
+
+
+       .burger-div-sidebarsm{
+        width:100%; display:flex; justify-content:end;
+       }
+
+       .nav-div-main{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .burger-show-div{
+        width: 100%;
+         /* background-color: aqua; */
+    position: relative;
+        }
+
+        .burger-div-button{
+            position: relative;
+            left: 6%;
+        }
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    .navbarmd{
+        width: 30%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 100vh;
+        background-color: cadetblue;
+        position: fixed;
+        z-index: 5;
+
+
+
+    }
+
+
+
+
+    .nav-div-main{
+        display: flex;
+
+        align-items: center;
+
+
+        }
+
+    .nav-div{
+
+        display: flex;
+        align-items: center;
+
+
+
+  }
+
+
+  .navbarmd::-webkit-scrollbar {
+      width: 10px;
+  }
+
+  .navbarmd::-webkit-scrollbar-thumb {
+      background: #080a0c;
+      border-radius: 4px;
+
+
+  }
+
+
+  .navbarmd::-webkit-scrollbar-thumb:hover {
+      background: #ddbebe;
+  }
+
+
+
+    .dashboard {
+        width: 100%;
+        height: 100vh;
+
+    }
+
+  .nav-div-main{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+.burger-div-sidebarmd{
+ width:100%; display:flex; justify-content:end;
+}
+.burger-show-div{
+    width: 100%;
+     /* background-color: aqua; */
+position: relative;
+    }
+
+    .burger-div-button{
+        position: relative;
+        left: 6%;
+    }
+
+}
+
+
+@media screen and (min-width: 992px){
+    .navbarlg{
+        width: 20%;
+        position: static;
+        height: 100vh;
+        background-color: cadetblue;
+
+
+
+    }
+
+
+
+
+.navsm{
+    display: block !important;
+}
+
+.nav-div{
+    height: 100vh;
+
+      display:flex ;
+
+     position: relative;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+
+}
+
+.ul-style{
+    position: absolute;
+    top: 40%;
+}
+
+
+
+
+
+
+
+
+    .nav-div::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    .nav-div::-webkit-scrollbar-thumb {
+        background: #080a0c;
+        border-radius: 4px;
+
+
+    }
+
+
+    .nav-div::-webkit-scrollbar-thumb:hover {
+        background: #ddbebe;
+    }
+
+
+    .dashboard {
+        width: 80%;
+
+        height: 100vh;
+    }
+.burger-button{
+    display: none;
+}
+
+.dashboard-mainlg{
+    display: flex;
+    flex-wrap: wrap;
+}
+.dashboard-main{
+    position: static;
+}
+}
+
+
