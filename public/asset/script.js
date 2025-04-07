@@ -20,64 +20,26 @@ function crossMenu() {
 }
 //medium and small device responsive navber codebase
 
-//contact form data get value from input
+//service page tab-bar make
 
-document.getElementById("contact").addEventListener('submit',function(e){
-e.preventDefault()
-
-// const formData=new FormData(e.target);
-// const ss=formData.get("_token")
-
-const email=document.querySelector("#email").value
-const name=document.querySelector("#username").value
-const phone=document.querySelector("#number").value
-const message=document.querySelector("#message").value
-const s=document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-console.log(email,name,phone,message,s)
-
-console.log(this.getAttribute('action'));
-
-axios.post('/store',{
-    email:email,
-    name:name,
-    phone:phone,
-    message:message
-},{headers:{
-    "Content-Type":"application/json",
-    'X-CSRF-TOKEN':document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-
-}})
-.then(function(res){
-
-    if(res.data){
-        if (typeof res.data === 'string' && res.data.includes('<html')) {
-            throw new Error('Route not found');
-        }else{
-            Swal.fire({
-                position: "center",
-                icon: "success",
-                title: "data successfully saved to database",
-                showConfirmButton: false,
-                timer: 1500
-              });
-        }
+function tabBar(tab){
+console.log(tab);
+const allClass=document.querySelectorAll('.tab-div')
+console.log(allClass);
+console.log(allClass[0].id);
 
 
+allClass.forEach(tabId=>{
+    if(tabId.id===tab){
+        tabId.classList.remove('hidden')
+    }
+    else{
+        tabId.classList.add('hidden')
     }
 })
-.catch(function(error){
-    console.log(error);
-    Swal.fire({
-        position: "center",
-        icon: "success",
-        title: `${error}`,
-        showConfirmButton: false,
-        timer: 1500
-      });
+}
 
-})
-
-})
+//service page tab-bar make
 
 
 

@@ -131,17 +131,17 @@
                 standards-compliant, scalable, and modern software solutions that make you grow.</p>
 
             <div class="py-16 w-11/12 mx-auto flex justify-between">
-                <button class="  text-white border-[1px] border-white py-4 md:px-12 lg:px-20 rounded-full focus:bg-[#1AA7BA] ">Design
+                <button onclick="tabBar('tab-1')" class="text-white border-[1px] border-white py-4 md:px-12 lg:px-20 rounded-full focus:bg-[#1AA7BA] ">Design
                 </button>
-                <button class="  text-white border-[1px] border-white py-4 md:px-12 lg:px-20 rounded-full focus:bg-[#1AA7BA] ">Fronend
+                <button onclick="tabBar('tab-2')" class="text-white border-[1px] border-white py-4 md:px-12 lg:px-20 rounded-full focus:bg-[#1AA7BA] ">Fronend
                 </button>
-                <button class="  text-white border-[1px] border-white py-4 md:px-12 lg:px-20 rounded-full focus:bg-[#1AA7BA] ">Backend
+                <button onclick="tabBar('tab-3')" class="  text-white border-[1px] border-white py-4 md:px-12 lg:px-20 rounded-full focus:bg-[#1AA7BA] ">Backend
                 </button>
-                <button class="text-white border-[1px] border-white py-4 md:px-12 lg:px-20 rounded-full focus:bg-[#1AA7BA] ">Database
+                <button onclick="tabBar('tab-4')" class="text-white border-[1px] border-white py-4 md:px-12 lg:px-20 rounded-full focus:bg-[#1AA7BA] ">Database
                 </button>
             </div>
-            {{-- text-stack-icon --}}
-            <div class="py-16">
+            {{-- text-stack-icon div --}}
+            <div id="tab-1" class="py-16 tab-div  ">
                 <div class="w-9/12 mx-auto flex gap-10 flex-row justify-between flex-wrap  ">
                     <div class="p-8 bg-white w-2/12  rounded-xl flex flex-col justify-center items-center">
                         <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
@@ -170,6 +170,102 @@
                     <div class="p-8 bg-white w-2/12 rounded-xl flex flex-col justify-center items-center">
                         <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
                         <p>angular js</p>
+                    </div>
+                </div>
+            </div>
+            <div id="tab-2" class="py-16  tab-div hidden">
+                <div class="w-9/12 mx-auto flex gap-10 flex-row justify-between flex-wrap  ">
+                    <div class="p-8 bg-white w-2/12  rounded-xl flex flex-col justify-center items-center">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
+                        <p>angular js</p>
+                    </div>
+                    <div class="p-8 bg-white w-2/12 rounded-xl flex flex-col justify-center items-center">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
+                        <p>angular js</p>
+                    </div>
+                    <div class="p-8 bg-white w-2/12 rounded-xl flex flex-col justify-center items-center">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
+                        <p>angular js</p>
+                    </div>
+                    <div class="p-8 bg-white w-2/12 rounded-xl flex flex-col justify-center items-center">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
+                        <p>angular js</p>
+                    </div>
+                    <div class="p-8 bg-white w-2/12 rounded-xl flex flex-col justify-center items-center">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
+                        <p>angular js</p>
+                    </div>
+                    <div class="p-8 bg-white w-2/12 rounded-xl flex flex-col justify-center items-center">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
+                        <p>angular js</p>
+                    </div>
+                    <div class="p-8 bg-white w-2/12 rounded-xl flex flex-col justify-center items-center">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
+                        <p>shihab js</p>
+                    </div>
+                </div>
+            </div>
+            <div id="tab-3" class="py-16  tab-div hidden">
+                <div class="w-9/12 mx-auto flex gap-10 flex-row justify-between flex-wrap  ">
+                    <div class="p-8 bg-white w-2/12  rounded-xl flex flex-col justify-center items-center">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
+                        <p>angular tab-3 js</p>
+                    </div>
+                    <div class="p-8 bg-white w-2/12 rounded-xl flex flex-col justify-center items-center">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
+                        <p>angular js</p>
+                    </div>
+                    <div class="p-8 bg-white w-2/12 rounded-xl flex flex-col justify-center items-center">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
+                        <p>angular js</p>
+                    </div>
+                    <div class="p-8 bg-white w-2/12 rounded-xl flex flex-col justify-center items-center">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
+                        <p>angular js</p>
+                    </div>
+                    <div class="p-8 bg-white w-2/12 rounded-xl flex flex-col justify-center items-center">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
+                        <p>angular js</p>
+                    </div>
+                    <div class="p-8 bg-white w-2/12 rounded-xl flex flex-col justify-center items-center">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
+                        <p>angular js</p>
+                    </div>
+                    <div class="p-8 bg-white w-2/12 rounded-xl flex flex-col justify-center items-center">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
+                        <p>shihab js</p>
+                    </div>
+                </div>
+            </div>
+            <div id="tab-4" class="py-16  tab-div hidden">
+                <div class="w-9/12 mx-auto flex gap-10 flex-row justify-between flex-wrap  ">
+                    <div class="p-8 bg-white w-2/12  rounded-xl flex flex-col justify-center items-center">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
+                        <p>angular tab-4 js</p>
+                    </div>
+                    <div class="p-8 bg-white w-2/12 rounded-xl flex flex-col justify-center items-center">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
+                        <p>angular js</p>
+                    </div>
+                    <div class="p-8 bg-white w-2/12 rounded-xl flex flex-col justify-center items-center">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
+                        <p>angular js</p>
+                    </div>
+                    <div class="p-8 bg-white w-2/12 rounded-xl flex flex-col justify-center items-center">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
+                        <p>angular js</p>
+                    </div>
+                    <div class="p-8 bg-white w-2/12 rounded-xl flex flex-col justify-center items-center">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
+                        <p>angular js</p>
+                    </div>
+                    <div class="p-8 bg-white w-2/12 rounded-xl flex flex-col justify-center items-center">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
+                        <p>angular js</p>
+                    </div>
+                    <div class="p-8 bg-white w-2/12 rounded-xl flex flex-col justify-center items-center">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
+                        <p>shihab js</p>
                     </div>
                 </div>
             </div>
