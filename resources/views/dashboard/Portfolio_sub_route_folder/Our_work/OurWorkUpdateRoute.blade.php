@@ -35,7 +35,7 @@
             </div> <br> <br>
 
             <div> <label class="" for="">id</label> <br>
-                <input id="title" type="text" readonly value="{{$OurWorkSingleData->id}}"   name="id"
+                <input id="id" type="text" readonly value="{{$OurWorkSingleData->id}}"   name="id"
                     class="form-control" />
 
 
@@ -47,22 +47,26 @@
            <small class="error-message" style="color:red; " id="error-description"></small>
             </div> <br>
 
+
+
             <div>
 
+                <script type="text/javascript" src="//js.nicedit.com/nicEdit-latest.js"></script>
+                <script type="text/javascript">
+                    bkLib.onDomLoaded(function() {
+                        new nicEditor().panelInstance('explaination');
 
-                <label class="" for="explaination">Explaination</label> <br>
+
+                    });
+                </script>
+                <label class="" for="">Explaination</label> <br>
 
                 <textarea class="form-control" id="explaination" required name="area" style=" height:30vh;">{{$OurWorkSingleData->explaination}}
           </textarea> <br>
           <small  class="error-message" style="color:red; " id="error-explaination"></small>
 
-          <br>
-          <script type="text/javascript" src="//js.nicedit.com/nicEdit-latest.js"></script>
-          <script type="text/javascript">
-              bkLib.onDomLoaded(function() {
-                  new nicEditor().panelInstance('explaination');
-              });
-          </script>
+
+
             </div>
 
             <button class="btn btn-primary w-100">update</button>

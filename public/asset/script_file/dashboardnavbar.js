@@ -123,6 +123,113 @@ function aiMinus() {
    document.getElementById("aimenu").classList.add("d-none");
 
 }
+//buisness
+function buisnessPlus() {
+    document.getElementById("buisnessplus").classList.add("d-none");
+    document.getElementById("buisnessminus").classList.remove("d-none");
+
+     document.getElementById("buisnessmenu").classList.remove("d-none");
+
+
+}
+
+function buisnessMinus() {
+    document.getElementById("buisnessplus").classList.remove("d-none");
+    document.getElementById("buisnessminus").classList.add("d-none");
+
+   document.getElementById("buisnessmenu").classList.add("d-none");
+
+}
+
+//integrated
+function integratedPlus() {
+    document.getElementById("integratedplus").classList.add("d-none");
+    document.getElementById("integratedminus").classList.remove("d-none");
+
+     document.getElementById("integratedmenu").classList.remove("d-none");
+
+
+}
+
+function integratedMinus() {
+    document.getElementById("integratedplus").classList.remove("d-none");
+    document.getElementById("integratedminus").classList.add("d-none");
+
+   document.getElementById("integratedmenu").classList.add("d-none");
+
+}
+
+//intelligent
+function intelligentPlus() {
+    document.getElementById("intelligentplus").classList.add("d-none");
+    document.getElementById("intelligentminus").classList.remove("d-none");
+
+     document.getElementById("intelligentmenu").classList.remove("d-none");
+
+
+}
+
+function intelligentMinus() {
+    document.getElementById("intelligentplus").classList.remove("d-none");
+    document.getElementById("intelligentminus").classList.add("d-none");
+
+   document.getElementById("intelligentmenu").classList.add("d-none");
+
+}
+
+//network
+function networkPlus() {
+    document.getElementById("networkplus").classList.add("d-none");
+    document.getElementById("networkminus").classList.remove("d-none");
+
+     document.getElementById("networkmenu").classList.remove("d-none");
+
+
+}
+
+function networkMinus() {
+    document.getElementById("networkplus").classList.remove("d-none");
+    document.getElementById("networkminus").classList.add("d-none");
+
+   document.getElementById("networkmenu").classList.add("d-none");
+
+}
+
+//testing
+function testingPlus() {
+    document.getElementById("testingplus").classList.add("d-none");
+    document.getElementById("testingminus").classList.remove("d-none");
+
+     document.getElementById("testingmenu").classList.remove("d-none");
+
+
+}
+
+function testingMinus() {
+    document.getElementById("testingplus").classList.remove("d-none");
+    document.getElementById("testingminus").classList.add("d-none");
+
+   document.getElementById("testingmenu").classList.add("d-none");
+
+}
+//cybersecuirity
+
+function secuirityPlus() {
+    document.getElementById("secuirityplus").classList.add("d-none");
+    document.getElementById("secuirityminus").classList.remove("d-none");
+
+     document.getElementById("secuiritymenu").classList.remove("d-none");
+
+
+}
+
+function secuirityMinus() {
+    document.getElementById("secuirityplus").classList.remove("d-none");
+    document.getElementById("secuirityminus").classList.add("d-none");
+
+   document.getElementById("secuiritymenu").classList.add("d-none");
+
+}
 // service sub menu
 
 //dashboard-navbar hide
@@ -137,6 +244,6 @@ function burgerShow(){
 function burgerHide(){
 
     document.getElementById('sidebar-menu').classList.add("navsm")
-    
+
 }
 //dashboard-navbar hide show

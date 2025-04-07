@@ -14,7 +14,9 @@
 
 .box{text-shadow: 1px 1px 2px rgb(137, 127, 127);}
 
-
+.list-style li{
+list-style-type: disc !important;
+}
 
 .open-sans {
     font-family: "Open Sans", sans-serif;
@@ -37,42 +39,3 @@
 
 
 
-
-  /* .border-animated {
-    position: relative;
-    overflow: hidden;
-}
-
-.border-animated::before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    background: conic-gradient(#ff3cac, #562b7c, #2b86c5, #ff3cac);
-    border-radius: 20px;
-    z-index: 0;
-    animation: rotateBorder 3s linear infinite;
-}
-
-.border-animated::after {
-    content: "";
-    position: absolute;
-    inset: 3px;
-    background: #119EB6;
-    border-radius: 20px;
-    z-index: 1;
-}
-
-.button-text {
-    position: relative;
-    z-index: 2;
-    color: white;
-    font-weight: bold;
-}
-
-@keyframes rotateBorder {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-} */

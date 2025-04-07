@@ -1,6 +1,9 @@
 @extends('page.root')
 @section('title', 'portfolio')
 @section('layout')
+@section('tailwind')
+@vite('resources/css/app.css')
+@endsection
     @php
         use Illuminate\Support\Str;
     @endphp

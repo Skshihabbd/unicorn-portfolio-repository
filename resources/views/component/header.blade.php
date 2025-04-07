@@ -1,3 +1,4 @@
+@vite('resources/css/app.css')
 {{-- This is the header part with navbar for large device --}}
 
 <div class="z-10  sticky top-0 drop-shadow-sm border-b-[1px]  bg-white ">

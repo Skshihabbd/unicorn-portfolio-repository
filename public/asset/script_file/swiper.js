@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     new Swiper(".swiper", {
         loop: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
+        // autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: true,
+        // },
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -14,4 +14,5 @@ document.addEventListener("DOMContentLoaded", function () {
             prevEl: ".swiper-button-prev",
         },
     });
+
 });

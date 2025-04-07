@@ -2,7 +2,9 @@
 @section('title', 'home page')
 
 @section('layout')
-
+@section('tailwind')
+@vite('resources/css/app.css')
+@endsection
 
 
     <section class=" ">

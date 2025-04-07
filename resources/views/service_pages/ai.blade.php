@@ -1,48 +1,83 @@
 @extends('page.root')
 @section('title','network')
+@section('tailwind')
+
+@endsection
 @section('layout')
+
 <section>
     <p class="text-7xl font-semibold w-10/12 mx-auto  text-center py-14"><span class="text-[#0B4392]">USSBD</span> excels
         in enterprise
         network transformation</p>
 
     <div class=" bg-[#003D69] h-[90vh] grid grid-cols-2 mt-20">
-        <div class="col-span-1 ">
+        @forelse ($section_1_datas as $section_1_data)
+        <div class="col-span-1">
+            <p class="text-4xl text-center text-white mt-10">{{ $section_1_data->title }}</p>
+            <div class="flex justify-center items-center w-11/12 mx-auto mt-20">
+                <p class="text-xl text-[#d9dbdf]">{{ $section_1_data->description }}</p>
+            </div>
+        </div>
+        <div>
+            <img class="h-[90vh]" src="{{ asset($section_1_data->image) }}" alt="network">
+        </div>
+    @empty
+        <div class="col-span-1">
             <p class="text-4xl text-center text-white mt-10">Enterprise Network Services</p>
             <div class="flex justify-center items-center w-11/12 mx-auto mt-20">
-                <p class="text-xl text-[#d9dbdf]">As a leader in the Network services domain, USSBD is well- positioned
+                <p class="text-xl text-[#d9dbdf]">As a leader in the Network services domain, USSBD is well-positioned
                     to assist enterprises with their network transformation needs. We cover the entire Networks
                     Lifecycle – from Managed Services to Transformation.</p>
             </div>
         </div>
-        <div> <img class="h-[90vh]" src="{{ asset('asset/network.jpeg') }}" alt="network" srcset=""></div>
+        <div>
+            <img class="h-[90vh]" src="{{ asset('asset/network.jpeg') }}" alt="network">
+        </div>
+    @endforelse
     </div>
 </section>
 {{-- network --}}
 <section>
-    <div class=" flex justify-between items-center my-16 ">
+    <div class=" flex justify-between items-center my-16  ">
+
+    @forelse ($section_2_datas as $section_2_data )
+    <div class=" w-[55%] ">
+        <img class="" src="{{ asset($section_2_data->image) }}" alt="network" srcset="">
+    </div>
+    <div class="space-y-2   w-[40%] ">
+        <div >
+            <p class="text-5xl text-center text-black ">{{ $section_2_data->title }}</p>
+
+        </div>
 
         <div>
-            <img class="w-full" src="{{ asset('asset/section image/network_3.jpg') }}" alt="" srcset="">
+          <p class=""> {!!$section_2_data->description!!}</p>
         </div>
-        <div class="space-y-2">
-            <p class="lg:text-5xl 2xl:text-7xl mb-4   font-semibold"><span class="text-[#0d2a53]">Leading</span>
-                Provider of <span class="text-[#0a0f17]">Secure</span>, Scalable, and <span
-                    class="text-[#0B4392]">High-Performance</span> Network Solutions</p>
 
-            <p><strong>Network Infrastructure Design & Implementation</strong> – Setting up and optimizing LAN, WAN, and
-                cloud-based networks</p>
-            <p><strong>Cloud Networking</strong> – Integrating cloud solutions like AWS, Azure, and Google Cloud for
-                scalable networking</p>
-            <p><strong>Cybersecurity & Network Protection</strong> – Implementing firewalls, intrusion detection systems
-                (IDS), and VPN security.</p>
-            <p><strong>IoT Network Integration</strong> – Connecting smart devices and IoT ecosystems for real-time data
-                exchange.</p>
+    </div>
+    @empty
+    <div>
+        <img class="w-full" src="{{ asset('asset/section image/network_3.jpg') }}" alt="network" srcset="">
+    </div>
+    <div class="space-y-2">
+        <p class="lg:text-5xl 2xl:text-7xl mb-4   font-semibold"><span class="text-[#0d2a53]">Leading</span>
+            Provider of <span class="text-[#0a0f17]">Secure</span>, Scalable, and <span
+                class="text-[#0B4392]">High-Performance</span> Network Solutions</p>
 
-            <p><strong>Managed Network Services</strong> – 24/7 monitoring, maintenance, and support for business
-                networks.</p>
+        <p><strong>Network Infrastructure Design & Implementation</strong> – Setting up and optimizing LAN, WAN, and
+            cloud-based networks</p>
+        <p><strong>Cloud Networking</strong> – Integrating cloud solutions like AWS, Azure, and Google Cloud for
+            scalable networking</p>
+        <p><strong>Cybersecurity & Network Protection</strong> – Implementing firewalls, intrusion detection systems
+            (IDS), and VPN security.</p>
+        <p><strong>IoT Network Integration</strong> – Connecting smart devices and IoT ecosystems for real-time data
+            exchange.</p>
 
-        </div>
+        <p><strong>Managed Network Services</strong> – 24/7 monitoring, maintenance, and support for business
+            networks.</p>
+
+    </div>
+    @endforelse
 
     </div>
 </section>

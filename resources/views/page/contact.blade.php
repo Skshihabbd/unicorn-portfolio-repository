@@ -1,6 +1,10 @@
 @extends('page.root')
 @section('title', 'contact')
+@section('tailwind')
+@vite('resources/css/app.css')
+@endsection
 @section('layout')
+
 <section>
 <div>
 

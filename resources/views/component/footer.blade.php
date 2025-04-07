@@ -44,11 +44,11 @@
     </div>
     <hr class="bg-gray-500 h-[2px] ">
 
-        <div class="py-5 bg-black text-white md:bg-white md:text-black">
+    <div class="py-5 bg-black text-white md:bg-white md:text-black">
 
-            <p class="text-center "><span class="font-bold ">©</span> <span class="font font-semibold">2005- 25 ALL
-                    RIGHT RESERVED TO USSBD.COM</span></p>
-        </div>
+        <p class="text-center "><span class="font-bold ">©</span> <span class="font font-semibold">2005- 25 ALL
+                RIGHT RESERVED TO USSBD.COM</span></p>
+    </div>
 
 
 

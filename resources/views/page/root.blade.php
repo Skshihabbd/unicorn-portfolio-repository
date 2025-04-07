@@ -15,7 +15,7 @@
     <title>@yield('title', 'Default title')</title>
     <link rel="stylesheet" href="{{ asset('asset/style.css') }}">
 
-    @vite('resources/css/app.css')
+   @yield('tailwind')
     {{-- fontt --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,6 +50,7 @@
             width: 100%;
             height: 300px;
         }
+
         .swiper-slide {
             display: flex;
             align-items: center;
@@ -57,6 +58,11 @@
             font-size: 20px;
             background: #ddd;
         }
+
+
+
+
+
     </style>
 
 </head>
@@ -83,9 +89,10 @@
     <!-- ✅ Swiper JS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  
 
-    <script src="{{asset('asset/script_file/swiper.js')}}"></script>
+
+    <script src="{{ asset('asset/script_file/swiper.js') }}"></script>
+    @yield('scripts')
 </body>
 
 </html>

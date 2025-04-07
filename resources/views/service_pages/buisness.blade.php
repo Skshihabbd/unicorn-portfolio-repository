@@ -1,6 +1,9 @@
 @extends('page.root')
 @section('title','Buisness')
 @section('layout')
+@section('tailwind')
+@vite('resources/css/app.css')
+@endsection
 <section>
     <p class="text-7xl font-semibold w-10/12 mx-auto  text-center py-14"><span class="text-[#0B4392]">USSBD</span> excels
         in enterprise

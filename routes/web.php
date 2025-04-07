@@ -1,10 +1,9 @@
 <?php
 
-// use App\Http\Controllers\Contact;
-
-use App\Http\Controllers\Analysis;
+use App\Http\Controllers\ArtificialIntelligence;
 use App\Http\Controllers\Home_Controller;
 use App\Http\Controllers\Portfolio_Controller;
+use App\Http\Controllers\ServiceController;
 use App\Http\Middleware\AuthMiddleware;
 use Illuminate\Support\Facades\Route;
 
@@ -20,9 +19,7 @@ Route::get('/about', function () {
 Route::get('/portfolio', function () {
     return view('page.portfolio');
 })->name('portfolio');
-Route::get('/service', function () {
-    return view('page.service');
-})->name('service');
+Route::get('/service', [ServiceController::class,"service_page_all_data_get"])->name('service');
 Route::get('/contact', function () {
     return view('page.contact');
 })->name('contact');
@@ -50,9 +47,7 @@ Route::get('/service/Integrated-engineering', function () {
 Route::get('/service/Intelligence-automation', function () {
     return view('service_pages.intelligent');
 })->name('intelligence');
-Route::get('/service/Artificial-Intelligence', function () {
-    return view('service_pages.ai');
-})->name('ai');
+
 Route::get('/service/Cyber-Security', function () {
     return view('service_pages.security');
 })->name('security');
@@ -64,6 +59,18 @@ Route::get('/dashboard', function () {
 })->name('dashboard');
 
 
+
+//-------------------------------------------------------------------------------------------------------------
+//Service_main_route_category_dashboard
+
+//service category section
+Route::get("/service_category",[ServiceController::class,"service_category_get_data"])->name("service_category");
+Route::post("/service_category_post",[ServiceController::class,"service_category_post_data"]);
+Route::get("/service_category_single_data_get/{id}",[ServiceController::class,"service_category_single_data_get"]);
+//service category section
+
+//Service_main_route_category_dashboard
+//----------------------------------------------------------------------------------------------
 
 
 
@@ -82,7 +89,7 @@ Route::delete("/single_data_our_work_delete/{id}",[Portfolio_Controller::class,'
 
 
 
-// ourstore_crud_route
+// ourstore_crud_route_homepage
 
 
 Route::get('/ourservice',[Home_Controller::class,"getOurService"] )->name('ourservice');
@@ -109,9 +116,9 @@ Route::delete(
 Route::put('/ourservice_update/{id}',[Home_Controller::class ,"singleValueUpdate"])->name('ourservice_update');
 
 
-// ourstore_crud_route
+// ourstore_crud_route_homepage
 
-// what we do section  crud operation
+// what we do section  crud operation_homepage
 
 Route::get('/analysis-section',[Home_Controller::class,"analysis_section_get_data"]
 )->name("analysis");
@@ -119,10 +126,144 @@ Route::get('/analysis-section',[Home_Controller::class,"analysis_section_get_dat
  Route::post('/analysis_section_post',[Home_Controller::class,"analysis_section_data_post"])->name("analysis_section_data_posts");
 
 
-// what we do section  crud operation
+// what we do section  crud operation_homepage
+
+
+//service sub category all route
+
+//network route
+
+// section-1
+
+// section-1
+//---------------------------------------------------------------
+// section-2
+// section-2
+//---------------------------------------------------------------
+// section-3
+// section-3
+//---------------------------------------------------------------
+//network route
+//---------------------------------------------------------------
+//Testing route
+
+// section-1
+// section-1
+//---------------------------------------------------------------
+// section-2
+// section-2
+//---------------------------------------------------------------
+// section-3
+// section-3
+//---------------------------------------------------------------
+//Testing route
+//---------------------------------------------------------------
+//Buisness Excellence route
+
+// section-1
+// section-1
+//---------------------------------------------------------------
+// section-2
+// section-2
+//---------------------------------------------------------------
+// section-3
+// section-3
+//---------------------------------------------------------------
+//Buisness Excellence route
+//---------------------------------------------------------------
+//Integrated Engineering route
+
+// section-1
+// section-1
+//---------------------------------------------------------------
+// section-2
+// section-2
+//---------------------------------------------------------------
+// section-3
+// section-3
+//---------------------------------------------------------------
+//Integrated Engineering route
+//---------------------------------------------------------------
+//Intelligent Automation route
+
+// section-1
+// section-1
+//---------------------------------------------------------------
+// section-2
+// section-2
+//---------------------------------------------------------------
+// section-3
+// section-3
+//---------------------------------------------------------------
+//Intelligent Automation route
+//---------------------------------------------------------------
+//Cyber Secuirity route
+
+// section-1
+// section-1
+//---------------------------------------------------------------
+// section-2
+// section-2
+//---------------------------------------------------------------
+// section-3
+// section-3
+//---------------------------------------------------------------
+//Cyber Secuirity route
+//---------------------------------------------------------------
+
+//Artificial Intelligence route
+Route::get('/service/Artificial-Intelligence',[ArtificialIntelligence::class,"artificialIntelligence_data_get"])->name('ai');
+// section-1
+Route::get("/ai_section_1_get_data",[ArtificialIntelligence::class,"ai_section_1_get_data"])->name('ai_section_1_get_data');
+Route::get("/ai_section_1_single_data/{id}",[ArtificialIntelligence::class,"ai_section_1_single_data"])->name('ai_section_1_single_data');
+
+Route::post("/ai_section_1_post_data",[ArtificialIntelligence::class,"ai_section_1_post_data"]);
+
+Route::post("/ai_section_1_update_data/{id}",[ArtificialIntelligence::class,"ai_section_1_update_data"]);
+
+
+Route::delete("/ai_section_1_delete_data/{id}",[ArtificialIntelligence::class,"ai_section_1_delete_data"])->name('ai_section_1_delete_data');
+// section-1
+//---------------------------------------------------------------
+// section-2
+
+Route::get("/ai_section_2_get_data",[ArtificialIntelligence::class,"ai_section_2_get_data"])->name('ai_section_2_get_data');
+Route::get("/ai_section_2_single_data/{id}",[ArtificialIntelligence::class,"ai_section_2_single_data"])->name('ai_section_2_single_data');
+
+Route::post("/ai_section_2_post_data",[ArtificialIntelligence::class,"ai_section_2_post_data"]);
+
+Route::post("/ai_section_2_update_data/{id}",[ArtificialIntelligence::class,"ai_section_2_update_data"]);
+Route::delete("/ai_section_2_delete_data/{id}",[ArtificialIntelligence::class,"ai_section_2_delete_data"])->name('ai_section_2_delete_data');
+// section-2
+//---------------------------------------------------------------
+// section-3
+Route::get("/ai_section_3_get_data",[ArtificialIntelligence::class,"ai_section_3_get_data"])->name('ai_section_3_get_data');
+Route::get("/ai_section_3_single_data/{id}",[ArtificialIntelligence::class,"ai_section_3_single_data"])->name('ai_section_3_single_data');
+Route::post("/ai_section_3_post_data",[ArtificialIntelligence::class,"ai_section_3_post_data"]);
+Route::post("/ai_section_3_update_data/{id}",[ArtificialIntelligence::class,"ai_section_3_update_data"]);
+Route::delete("/ai_section_3_delete_data/{id}",[ArtificialIntelligence::class,"ai_section_3_delete_data"])->name('ai_section_3_delete_data');
+// section-3
+//---------------------------------------------------------------
+//Artificial Engineering route
+//---------------------------------------------------------------
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//service sub category all route
 
 
 

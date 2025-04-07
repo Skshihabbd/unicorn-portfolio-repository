@@ -1,5 +1,8 @@
 @extends('page.root')
 @section('title', 'about-us page')
+@section('tailwind')
+    @vite('resources/css/app.css')
+@endsection
 @section('layout')
     <section>
         <div class=" ">
@@ -57,101 +60,111 @@
 
     {{-- project that we complete --}}
     <section>
-<div class="my-28  flex justify-around flex-wrap gap-4 px-6 w-10/12 mx-auto py-16">
-<div class="text-center bg-[#F8F9FA]  w-[30%] h-[40vh] flex justify-center items-center border-[1px] transition-transform hover:scale-125  duration-700">
-    <div >
-        <p class="text-2xl font-semibold">
-            400+
-        </p>
-        <p class="text-xl pt-3">
-            automation project
-        </p>
-    </div>
-</div>
-<div class="text-center bg-[#F8F9FA]  w-[30%] h-[40vh] flex justify-center items-center border-[1px] transition-transform hover:scale-125 duration-700">
-    <div>
-        <p class="text-2xl font-semibold">
-            1200+
-        </p>
-        <p class="text-xl pt-3">
-            web + app
-        </p>
-    </div>
-</div>
-<div class="text-center bg-[#F8F9FA]  w-[30%] h-[40vh] flex justify-center items-center border-[1px] transition-transform hover:scale-125 duration-700">
-    <div>
-        <p class="text-2xl font-semibold">
-            1700+
-        </p>
-        <p class="text-xl pt-3">
-            complete clint support
+        <div class="my-28  flex justify-around flex-wrap gap-4 px-6 w-10/12 mx-auto py-16">
+            <div
+                class="text-center bg-[#F8F9FA]  w-[30%] h-[40vh] flex justify-center items-center border-[1px] transition-transform hover:scale-125  duration-700">
+                <div>
+                    <p class="text-2xl font-semibold">
+                        400+
+                    </p>
+                    <p class="text-xl pt-3">
+                        automation project
+                    </p>
+                </div>
+            </div>
+            <div
+                class="text-center bg-[#F8F9FA]  w-[30%] h-[40vh] flex justify-center items-center border-[1px] transition-transform hover:scale-125 duration-700">
+                <div>
+                    <p class="text-2xl font-semibold">
+                        1200+
+                    </p>
+                    <p class="text-xl pt-3">
+                        web + app
+                    </p>
+                </div>
+            </div>
+            <div
+                class="text-center bg-[#F8F9FA]  w-[30%] h-[40vh] flex justify-center items-center border-[1px] transition-transform hover:scale-125 duration-700">
+                <div>
+                    <p class="text-2xl font-semibold">
+                        1700+
+                    </p>
+                    <p class="text-xl pt-3">
+                        complete clint support
 
 
-        </p>
-    </div>
-</div>
-<div class="text-center bg-[#F8F9FA]  w-[30%] h-[40vh] flex justify-center items-center border-[1px] transition-transform hover:scale-125 duration-700">
-    <div>
-        <p class="text-2xl font-semibold">
-            1600+
-        </p>
-        <p class="text-xl pt-3">
-            completed project
-        </p>
-    </div>
-</div>
+                    </p>
+                </div>
+            </div>
+            <div
+                class="text-center bg-[#F8F9FA]  w-[30%] h-[40vh] flex justify-center items-center border-[1px] transition-transform hover:scale-125 duration-700">
+                <div>
+                    <p class="text-2xl font-semibold">
+                        1600+
+                    </p>
+                    <p class="text-xl pt-3">
+                        completed project
+                    </p>
+                </div>
+            </div>
 
 
 
-</div>
+        </div>
 
     </section>
-{{-- ourculture section --}}
-<section>
-    <div class="bg-[#0B4392] my-24 py-28">
-        <p class="text-3xl text-white font-medium py-4 pl-3">Our Culture</p>
-        <p class="text-2xl text-white pl-3 py-4">We are passionate, we are innovative, we are transforming the future of technology</p>
-        <div class="flex justify-stretch items-center py-10 w-[97%] mx-auto">
+    {{-- ourculture section --}}
+    <section>
+        <div class="bg-[#0B4392] my-24 py-28">
+            <p class="text-3xl text-white font-medium py-4 pl-3">Our Culture</p>
+            <p class="text-2xl text-white pl-3 py-4">We are passionate, we are innovative, we are transforming the future of
+                technology</p>
+            <div class="flex justify-stretch items-center py-10 w-[97%] mx-auto">
 
 
-            <div class="flex flex-wrap col-span-3 w-[75%]  gap-4">
-                <img class=" w-[40%] h-[40vh] rounded-xl" src="{{asset('asset/section image/aboutus2.jpeg')}}" alt="" srcset="">
-            <img class=" w-[55%] h-[40vh] rounded-xl" src="{{asset('asset/section image/about-us1.jpeg')}}" alt="" srcset="">
-            <img class=" w-[50%] h-[40vh] rounded-xl" src="{{asset('asset/section image/aboutus2.jpeg')}}" alt="" srcset="">
-            <img class=" w-[45%] h-[40vh] rounded-xl" src="{{asset('asset/section image/about-us1.jpeg')}}" alt="" srcset="">
+                <div class="flex flex-wrap col-span-3 w-[75%]  gap-4">
+                    <img class=" w-[40%] h-[40vh] rounded-xl" src="{{ asset('asset/section image/aboutus2.jpeg') }}"
+                        alt="" srcset="">
+                    <img class=" w-[55%] h-[40vh] rounded-xl" src="{{ asset('asset/section image/about-us1.jpeg') }}"
+                        alt="" srcset="">
+                    <img class=" w-[50%] h-[40vh] rounded-xl" src="{{ asset('asset/section image/aboutus2.jpeg') }}"
+                        alt="" srcset="">
+                    <img class=" w-[45%] h-[40vh] rounded-xl" src="{{ asset('asset/section image/about-us1.jpeg') }}"
+                        alt="" srcset="">
+                </div>
+                <div class="w-[25%]  ">
+                    <img class=" h-[85vh] rounded-xl col-span-1" src="{{ asset('asset/section image/about-us-4.jpeg') }}"
+                        alt="" srcset="">
+                </div>
             </div>
-           <div class="w-[25%]  ">
-            <img class=" h-[85vh] rounded-xl col-span-1" src="{{asset('asset/section image/about-us-4.jpeg')}}" alt="" srcset="">
-           </div>
-                    </div>
-    </div>
-</section>
-{{-- ourculture section --}}
-
-{{-- ourpartnar --}}
-<section>
-
-    <div class="swiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide ">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 3</div>
         </div>
-        <!-- If you want pagination & navigation -->
-        <div class="swiper-pagination"></div>
-        {{-- <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div> --}}
-    </div>
+    </section>
+    {{-- ourculture section --}}
+
+    {{-- ourpartnar --}}
+    <section>
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide ">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- If you want pagination & navigation -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
 
 
 
-</section>
-{{-- ourpartnar --}}
+    </section>
+    {{-- ourpartnar --}}
 
 @endsection

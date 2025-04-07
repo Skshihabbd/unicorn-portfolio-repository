@@ -1,12 +1,17 @@
 @extends('page.root')
 @section('title', 'service')
 @section('layout')
+@section('tailwind')
+@vite('resources/css/app.css')
+@endsection
     {{-- what we do section --}}
     <section class="mb-16">
         <div class="w-10/12 mx-auto">
-            <p class="text-6xl text-center py-12 font-bold ">Innovative <span class="text-[#0B4392]">Software</span> Solutions For Growth And Efficiency</p>
+            <p class="text-6xl text-center py-12 font-bold ">Innovative <span class="text-[#0B4392]">Software</span> Solutions
+                For Growth And Efficiency</p>
         </div>
     </section>
+    {{-- service category --}}
     <section>
 
         <div class="bg-[#0B4392]">
@@ -21,41 +26,24 @@
             </div>
             <div class=" w-11/12 mx-auto pt-6 pb-36 flex justify-between gap-10">
                 <div class="w-6/12 space-y-6">
-                    <button
-                        class="bg-[#119EB6] w-full rounded-2xl py-5 grid grid-cols-3 focus:bg-white focus:text-black"><span
-                            class="col-span-1 text-lg font-bold">Web Design</span></button>
-                    <button
-                        class="bg-[#119EB6] w-full rounded-2xl py-5 grid grid-cols-3 focus:bg-white focus:text-black"><span
-                            class="col-span-1 text-lg font-bold">Web Design</span></button>
-                    <button
-                        class="bg-[#119EB6] w-full rounded-2xl py-5 grid grid-cols-3 focus:bg-white focus:text-black"><span
-                            class="col-span-1 text-lg font-bold">Web Design</span></button>
-                    <button
-                        class="bg-[#119EB6] w-full rounded-2xl py-5 grid grid-cols-3 focus:bg-white focus:text-black"><span
-                            class="col-span-1 text-lg font-bold">Web Design</span></button>
-                    <button
-                        class="bg-[#119EB6] w-full rounded-2xl py-5 grid grid-cols-3 focus:bg-white focus:text-black"><span
-                            class="col-span-1 text-lg font-bold">Web Design</span></button>
-                    <button
-                        class="bg-[#119EB6] w-full rounded-2xl py-5 grid grid-cols-3 focus:bg-white focus:text-black"><span
-                            class="col-span-1 text-lg font-bold">Web Design</span></button>
-                    <button
-                        class="bg-[#119EB6] w-full rounded-2xl py-5 grid grid-cols-3 focus:bg-white focus:text-black"><span
-                            class="col-span-1 text-lg font-bold">Web Design</span></button>
-                    <button
-                        class="bg-[#119EB6] w-full rounded-2xl py-5 grid grid-cols-3 focus:bg-white focus:text-black"><span
-                            class="col-span-1 text-lg font-bold">Web Design</span></button>
+                    @foreach ($service_category_all_datas_get as $service_category_all_data_get)
+                        <button onclick="Livewire.dispatch('loadService', { id: {{ $service_category_all_data_get->id }} })"
+                            class="bg-[#119EB6] w-full rounded-2xl py-5 grid grid-cols-3 focus:bg-white focus:text-black"><span
+                                class="col-span-1 text-lg font-bold">{{ $service_category_all_data_get->title }}</span></button>
+                    @endforeach
+
                 </div>
                 <div class=" w-full ">
-                    <img class="h-[80vh] rounded-xl w-10/12" src="{{ asset('asset/pexels-souvenirpixels-414612.jpg') }}"
-                        alt="" srcset="">
 
-                    <p class="text-5xl text-white my-3">Web Design</p>
-                    <p class="text-white text-xl">taking useful information out of your data and putting it in a visual
-                        format to help you make better decisions.</p>
+                    @livewire('service-category')
+
+                    <div>
+
+
+
+                    </div>
                 </div>
             </div>
-        </div>
 
     </section>
 
@@ -133,7 +121,7 @@
             </div>
         </div>
     </section>
-    {{-- Our Software Development Company Tech-Stack --}}
+    {{-- Our Software Development Company Tech-Stack {{responsive problem}}--}}
     <section class="">
         <div class="bg-[#0B4392] pt-24">
             <p class="text-6xl text-center w-10/12 mx-auto text-white pb-10">Our Software Development Company Tech-Stack</p>
@@ -143,13 +131,13 @@
                 standards-compliant, scalable, and modern software solutions that make you grow.</p>
 
             <div class="py-16 w-11/12 mx-auto flex justify-between">
-                <button class="  text-white border-[1px] border-white py-4 px-20 rounded-full focus:bg-[#1AA7BA] ">Design
+                <button class="  text-white border-[1px] border-white py-4 md:px-12 lg:px-20 rounded-full focus:bg-[#1AA7BA] ">Design
                 </button>
-                <button class="  text-white border-[1px] border-white py-4 px-20 rounded-full focus:bg-[#1AA7BA] ">Fronend
+                <button class="  text-white border-[1px] border-white py-4 md:px-12 lg:px-20 rounded-full focus:bg-[#1AA7BA] ">Fronend
                 </button>
-                <button class="  text-white border-[1px] border-white py-4 px-20 rounded-full focus:bg-[#1AA7BA] ">Backend
+                <button class="  text-white border-[1px] border-white py-4 md:px-12 lg:px-20 rounded-full focus:bg-[#1AA7BA] ">Backend
                 </button>
-                <button class="text-white border-[1px] border-white py-4 px-20 rounded-full focus:bg-[#1AA7BA] ">Database
+                <button class="text-white border-[1px] border-white py-4 md:px-12 lg:px-20 rounded-full focus:bg-[#1AA7BA] ">Database
                 </button>
             </div>
             {{-- text-stack-icon --}}
@@ -176,13 +164,11 @@
                         <p>angular js</p>
                     </div>
                     <div class="p-8 bg-white w-2/12 rounded-xl flex flex-col justify-center items-center">
-                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt=""
-                            srcset="">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
                         <p>angular js</p>
                     </div>
                     <div class="p-8 bg-white w-2/12 rounded-xl flex flex-col justify-center items-center">
-                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt=""
-                            srcset="">
+                        <img class="w-20" src="{{ asset('asset/logo/angular js.png') }}" alt="" srcset="">
                         <p>angular js</p>
                     </div>
                 </div>
@@ -195,8 +181,8 @@
         <div class="mt-20 bg-[#F0F0F0] pt-10">
             <p class="text-6xl text-center text-[#686e76]">INDUSTRIES WE SERVE</p>
             <div class="py-20  ">
-                <img class="w-11/12 h-[90vh] mx-auto rounded-xl "
-                    src="{{ asset('asset/section image/pos-software.jpg') }}" alt="" srcset="">
+                <img class="w-11/12 h-[90vh] mx-auto rounded-xl " src="{{ asset('asset/section image/pos-software.jpg') }}"
+                    alt="" srcset="">
             </div>
             <div class="w-11/12 mx-auto flex flex-wrap justify-between gap-3 pt-10 pb-24">
                 <div
@@ -307,4 +293,8 @@
 
 
 
+@endsection
+
+@section('scripts')
+    <script src="{{ asset('asset/script_file/servicemain_folder_js_file/ourservicecategorymainpage.js') }}"></script>
 @endsection
