@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('ai_3_sections', function (Blueprint $table) {
             $table->id();
             $table->string('image');
-            $table->string('title');
-            $table->string('description');
+            $table->text('title');
+            $table->mediumText('description');
             $table->timestamps();
         });
     }

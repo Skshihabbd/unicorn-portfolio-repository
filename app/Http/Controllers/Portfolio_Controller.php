@@ -80,7 +80,7 @@ class Portfolio_Controller extends Controller
     {
 
         $validator = Validator::make($request->all(), [
-            'image' => 'required|image|mimes:png,jpeg|max:500',
+            'image' => 'image|mimes:png,jpeg|max:500',
             'heading' => "required|string|min:10",
             'title' => "required|string|min:10",
             'description' => "required|string|min:10",
@@ -95,11 +95,15 @@ class Portfolio_Controller extends Controller
             ], 422); // Send 422 response
         }
 
-
+        $heading = $request->input('heading');
+        $title = $request->input('title');
+        $description = $request->input('description');
+        $explaination = $request->input('explaination');
+        $getValue = portfolioourwork::find($id);
+            $fileNameOld = $getValue->logo;
         try {
 
-            $getValue = portfolioourwork::find($id);
-            $fileNameOld = $getValue->logo;
+
             if ($request->hasFile('image')) {
                 $file = $request->file('image');
 
@@ -107,26 +111,39 @@ class Portfolio_Controller extends Controller
 
                 $file->move(public_path('uploads_portfolio_ourwork_logo'), $fileName);
                 unlink(public_path($fileNameOld));
+
+                $getValue->update([
+                    "logo" => 'uploads_portfolio_ourwork_logo/' . $fileName,
+                    "heading" => $heading,
+                    "title" => $title,
+                    "description" => $description,
+                    "explaination" => $explaination,
+                ]);
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Data updated successfully!',
+                    'redirect_url' => route('our_work')
+                ]);
+
+            }else{
+                $getValue->update([
+                    "logo" => $fileNameOld,
+                    "heading" => $heading,
+                    "title" => $title,
+                    "description" => $description,
+                    "explaination" => $explaination,
+                ]);
+                return response()->json([
+                    'success' => true,
+                    'message' => 'Data updated successfully!',
+                    'redirect_url' => route('our_work')
+                ]);
             }
 
 
-            $heading = $request->input('heading');
-            $title = $request->input('title');
-            $description = $request->input('description');
-            $explaination = $request->input('explaination');
 
-            $getValue->update([
-                "logo" => 'uploads_portfolio_ourwork_logo/' . $fileName,
-                "heading" => $heading,
-                "title" => $title,
-                "description" => $description,
-                "explaination" => $explaination,
-            ]);
-            return response()->json([
-                'success' => true,
-                'message' => 'Data updated successfully!',
-                'redirect_url' => route('our_work')
-            ]);
+
+
         } catch (\Exception $e) {
             return response()->json([
                 'success' => false,
@@ -137,8 +154,14 @@ class Portfolio_Controller extends Controller
     }
 
     public function single_data_our_work_delete(String $id){
-        portfolioourwork::destroy($id);
-        
+
+        $data = portfolioourwork::find($id);
+        if ($data && $data->logo) {
+            unlink(public_path($data->logo));
+            portfolioourwork::destroy($id);
+        }
+
+
         return redirect()->route('our_work');
     }
 }

@@ -15,20 +15,20 @@
             @csrf
 
             <div> <label for="username">Image</label> <br>
-                <input id="image" type="file" required accept="image/*" placeholder="input image" name="image"
+                <input id="image" type="file"  accept="image/*" placeholder="input image" name="image"
                     class="form-control " /> <br>
                     <small class="error-message" style="color:red; " id="error-image"></small>
 
             </div>
             <br> <br>
             <div> <label class="" for="heading">Heading</label> <br>
-                <input id="heading" type="text" value="{{$OurWorkSingleData->heading}}" required placeholder="Input heading" name="heading"
+                <input id="heading" type="text" value="{{$OurWorkSingleData->heading}}"  placeholder="Input heading" name="heading"
                     class="form-control" /> <br>
                     <small class="error-message" style="color:red; " id="error-heading"></small>
 
             </div> <br> <br>
             <div> <label class="" for="">title</label> <br>
-                <input id="title" type="text" value="{{$OurWorkSingleData->title}}" required placeholder="Input title" name="title"
+                <input id="title" type="text" value="{{$OurWorkSingleData->title}}"  placeholder="Input title" name="title"
                     class="form-control" /> <br>
                     <small class="error-message" style="color:red; " id="error-title"></small>
 
@@ -43,7 +43,7 @@
             <div> <label class="" for="description">Description</label> <br>
 
 
-           <textarea  name="description"   class="form-control"  required id="" cols="30" rows="10">{{$OurWorkSingleData->description}}</textarea> <br>
+           <textarea  name="description"   class="form-control"   id="" cols="30" rows="10">{{$OurWorkSingleData->description}}</textarea> <br>
            <small class="error-message" style="color:red; " id="error-description"></small>
             </div> <br>
 
@@ -61,7 +61,7 @@
                 </script>
                 <label class="" for="">Explaination</label> <br>
 
-                <textarea class="form-control" id="explaination" required name="area" style=" height:30vh;">{{$OurWorkSingleData->explaination}}
+                <textarea class="form-control" id="explaination"  name="area" style=" height:30vh;">{{$OurWorkSingleData->explaination}}
           </textarea> <br>
           <small  class="error-message" style="color:red; " id="error-explaination"></small>
 

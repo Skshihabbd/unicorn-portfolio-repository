@@ -7,10 +7,13 @@ const image= formData.get('image')
 
 const title= formData.get('title')
 
-const description= nicEditors.findEditor('description').getContent();
+let description= nicEditors.findEditor('description').getContent();
 const token=formData.get("_token")
-console.log(image,title,description);
 
+description = description.replace(/<\/?(ul|ol)>/gi, '');
+description = description.replace(/<span[^>]*>/gi, '').replace(/<\/span>/gi, '');
+
+console.log(description);
 
 axios.post('/ai_section_2_post_data',{
     image,
@@ -29,6 +32,14 @@ axios.post('/ai_section_2_post_data',{
 console.log(res.data.message);
 if(res.data.message){
     e.target.reset()
+    Swal.fire({
+        position: "top-center",
+        icon: "success",
+        title: `${res.data.message}`,
+        showConfirmButton: false,
+        timer: 1500
+      });
+
 
 
     document.querySelectorAll('.error-message').forEach(el => {
@@ -42,6 +53,16 @@ nicEditors.findEditor('description').setContent('');
 .catch(function(error){
     console.log(error.response.data.errors);
     console.log(error.response.data.databaseerror);
+
+      if(error.response.data.databaseerror){
+        Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: `${error.response.data.databaseerror}`,
+            footer: '<a href="#">this is daytabase exception error</a>'
+          });
+      }
+
 
     const errors = error.response.data.errors;
 

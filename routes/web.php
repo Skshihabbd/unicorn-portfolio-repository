@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\About_Controller;
 use App\Http\Controllers\ArtificialIntelligence;
 use App\Http\Controllers\Home_Controller;
 use App\Http\Controllers\Portfolio_Controller;
@@ -12,10 +13,8 @@ use Illuminate\Support\Facades\Route;
 
 // main route
 
-Route::get('/',[Home_Controller::class,"AllHomeDataGet"] )->name('home');
-Route::get('/about', function () {
-    return view('page.about');
-})->name('about');
+
+
 Route::get('/portfolio', function () {
     return view('page.portfolio');
 })->name('portfolio');
@@ -89,44 +88,128 @@ Route::delete("/single_data_our_work_delete/{id}",[Portfolio_Controller::class,'
 
 
 
-// ourstore_crud_route_homepage
 
 
-Route::get('/ourservice',[Home_Controller::class,"getOurService"] )->name('ourservice');
+//home-page-main-route
+Route::get('/',[Home_Controller::class,"AllHomeDataGet"] )->name('home');
 
-Route::post('storeourservice', [Home_Controller::class, "storeOurService"])->name('storeourservice');
+// ourservice_crud_route_homepage
 
-Route::get(
-    '/ourserviceget',
-    [Home_Controller::class, "getOurService"]
-);
+Route::get("/home_ourservice_get_data",[Home_Controller::class,"home_ourservice_get_data"])->name('home_ourservice_get_data');
+Route::get("/home_ourservice_single_data/{id}",[Home_Controller::class,"home_ourservice_single_data"])->name('home_ourservice_single_data');
 
-Route::get(
-    '/ourservicegetsingle/{id}',
-    [Home_Controller::class, "GetSingleDataOurService"]
-)->name('ourserviceupdatesinglevalue');
+Route::post("/home_ourservice_post_data",[Home_Controller::class,"home_ourservice_post_data"]);
+
+Route::post("/home_ourservice_update_data/{id}",[Home_Controller::class,"home_ourservice_update_data"]);
 
 
-
-Route::delete(
-    '/ourservicedelete/{id}',
-    [Home_Controller::class, "DeleteSingleDataOurService"]
-)->name('ourservicedeletesingle');
-
-Route::put('/ourservice_update/{id}',[Home_Controller::class ,"singleValueUpdate"])->name('ourservice_update');
+Route::delete("/home_ourservice_delete_data/{id}",[Home_Controller::class,"home_ourservice_delete_data"])->name('home_ourservice_delete_data');
 
 
-// ourstore_crud_route_homepage
+// ourservice_crud_route_homepage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// what we do home_analysis_section  crud operation_homepage
+
+Route::get("/home_analysis_get_data",[Home_Controller::class,"home_analysis_get_data"])->name('home_analysis_get_data');
+Route::get("/home_analysis_single_data/{id}",[Home_Controller::class,"home_analysis_single_data"])->name('home_analysis_single_data');
+
+Route::post("/home_analysis_post_data",[Home_Controller::class,"home_analysis_post_data"]);
+
+Route::post("/home_analysis_update_data/{id}",[Home_Controller::class,"home_analysis_update_data"]);
+
+
+Route::delete("/home_analysis_delete_data/{id}",[Home_Controller::class,"home_analysis_delete_data"])->name('home_analysis_delete_data');
+
 
 // what we do section  crud operation_homepage
 
-Route::get('/analysis-section',[Home_Controller::class,"analysis_section_get_data"]
-)->name("analysis");
 
- Route::post('/analysis_section_post',[Home_Controller::class,"analysis_section_data_post"])->name("analysis_section_data_posts");
+//--------------------------------------------------------------------------------
+//why choose us crud operation_homepage
 
 
-// what we do section  crud operation_homepage
+
+Route::get("/home_choose_us_get_data",[Home_Controller::class,"home_choose_us_get_data"])->name('home_choose_us_get_data');
+Route::get("/home_choose_us_single_data/{id}",[Home_Controller::class,"home_choose_us_single_data"])->name('home_choose_us_single_data');
+
+Route::post("/home_choose_us_post_data",[Home_Controller::class,"home_choose_us_post_data"]);
+
+Route::post("/home_choose_us_update_data/{id}",[Home_Controller::class,"home_choose_us_update_data"]);
+
+
+Route::delete("/home_choose_us_delete_data/{id}",[Home_Controller::class,"home_choose_us_delete_data"])->name('home_choose_us_delete_data');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//why choose us crud operation_homepage
+
+//---------------------------------------------------------------------------------
+
+
+//-----------------------------------------------------------------------
+//how we work home page section
+
+Route::get("/home_how_we_work_get_data",[Home_Controller::class,"home_how_we_work_get_data"])->name('home_how_we_work_get_data');
+Route::get("/home_how_we_work_single_data/{id}",[Home_Controller::class,"home_how_we_work_single_data"])->name('home_how_we_work_single_data');
+
+Route::post("/home_how_we_work_post_data",[Home_Controller::class,"home_how_we_work_post_data"]);
+
+Route::post("/home_how_we_work_update_data/{id}",[Home_Controller::class,"home_how_we_work_update_data"]);
+
+
+Route::delete("/home_how_we_work_delete_data/{id}",[Home_Controller::class,"home_how_we_work_delete_data"])->name('home_how_we_work_delete_data');
+
+//how we work home page section
+
+
+
+
+//about_main_page_route
+Route::get('/about', [About_Controller::class,'about_page_get']
+)->name('about');
+//about_page_sub_route_who_we_are
+
+Route::get("/about_page_who_we_are_get_data",[About_Controller::class,"about_page_who_we_are_get_data"])->name('about_page_who_we_are_get_data');
+Route::get("/about_page_who_we_are_single_data/{id}",[About_Controller::class,"about_page_who_we_are_single_data"])->name('about_page_who_we_are_single_data');
+
+Route::post("/about_page_who_we_are_post_data",[About_Controller::class,"about_page_who_we_are_post_data"]);
+
+Route::post("/about_page_who_we_are_update_data/{id}",[About_Controller::class,"about_page_who_we_are_update_data"]);
+
+
+Route::delete("/about_page_who_we_are_delete_data/{id}",[About_Controller::class,"about_page_who_we_are_delete_data"])->name('about_page_who_we_are_delete_data');
+
+//about_page_sub_route_who_we_are
+
+
+
 
 
 //service sub category all route

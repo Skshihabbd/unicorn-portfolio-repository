@@ -5,7 +5,9 @@
 @section('tailwind')
 @vite('resources/css/app.css')
 @endsection
-
+@php
+use Illuminate\Support\Str;
+@endphp
 
     <section class=" ">
         {{-- banner section --}}
@@ -51,8 +53,32 @@
                                         <h1>CUSTOMIZED SOFTWARE</h1>
                                     </div>
                                     <div class="py-5">
-                                        <p>A card component has a figure, a body part, and inside body there are title and
-                                            actions parts</p>
+                                        <p>{{Str::limit('A card component has a figure, a body part, and inside body there are title and
+                                            actions parts.A card component has a figure, a body part,and inside body there are title and
+                                            actions parts A card component has a figure, a body part, and inside body there are title and
+                                            actions parts,',100,'....')}}</p>
+                                    </div>
+
+                                    <div class="flex justify-end pb-5">
+                                        <button>
+                                            <i class="fa-solid fa-arrow-up-right-from-square 2xl:text-3xl"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div data-aos="zoom-in" data-aos-duration="1500"
+                                class=" lg:w-4/12  rounded-xl shadow-xl space-y-9 ">
+                                <div class=" w-11/12 mx-auto">
+                                    <div class="grid grid-cols-3">
+                                        <p>logo</p>
+                                        <h1>CUSTOMIZED SOFTWARE</h1>
+                                    </div>
+                                    <div class="py-5">
+                                        <p>{{Str::limit('A card component has a figure, a body part, and inside body there are title and
+                                            actions parts.A card component has a figure, a body part,and inside body there are title and
+                                            actions parts A card component has a figure, a body part, and inside body there are title and
+                                            actions parts,',100,'....')}}</p>
                                     </div>
 
                                     <div class="flex justify-end pb-5">
@@ -69,26 +95,10 @@
                                         <h1>CUSTOMIZED SOFTWARE</h1>
                                     </div>
                                     <div class="py-5">
-                                        <p>A card component has a figure, a body part, and inside body there are title and
-                                            actions parts</p>
-                                    </div>
-
-                                    <div class="flex justify-end pb-5">
-                                        <i class="fa-solid fa-arrow-up-right-from-square 2xl:text-3xl"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div data-aos="zoom-in" data-aos-duration="1500"
-                                class=" lg:w-4/12  rounded-xl shadow-xl space-y-9 ">
-                                <div class=" w-11/12 mx-auto">
-                                    <div class="grid grid-cols-3">
-                                        <p>logo</p>
-                                        <h1>CUSTOMIZED SOFTWARE</h1>
-                                    </div>
-                                    <div class="py-5">
-                                        <p>A card component has a figure, a body part, and inside body there are title and
-                                            actions parts</p>
+                                        <p>{{Str::limit('A card component has a figure, a body part, and inside body there are title and
+                                            actions parts.A card component has a figure, a body part,and inside body there are title and
+                                            actions parts A card component has a figure, a body part, and inside body there are title and
+                                            actions parts,',100,'....')}}</p>
                                     </div>
 
                                     <div class="flex justify-end pb-5">
@@ -106,8 +116,10 @@
                                         <h1>CUSTOMIZED SOFTWARE</h1>
                                     </div>
                                     <div class="py-5">
-                                        <p>A card component has a figure, a body part, and inside body there are title and
-                                            actions parts</p>
+                                        <p>{{Str::limit('A card component has a figure, a body part, and inside body there are title and
+                                            actions parts.A card component has a figure, a body part,and inside body there are title and
+                                            actions parts A card component has a figure, a body part, and inside body there are title and
+                                            actions parts,',200,'....')}}</p>
                                     </div>
 
                                     <div class="flex justify-end pb-5">

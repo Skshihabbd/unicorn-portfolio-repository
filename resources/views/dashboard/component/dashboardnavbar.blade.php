@@ -3,7 +3,7 @@
     <div class="nav-div">
         <ul class="ul-style">
             <li>
-                <a href="{{ route('ourservice') }}">Home</a>
+                <a href="{{route('home')}}">Home</a>
                 <span class="home-span">
                     <button onclick="homePlus()" id="homeplus"><img class="width " src="{{ asset('asset/logo/plus.png') }}"
                             alt="" srcset=""></button>
@@ -11,16 +11,16 @@
                             src="{{ asset('asset/logo/minus.png') }}" alt="" srcset=""> </button></span>
                 <ul id="homemenu" class="d-none">
                     <li>
-                        <a href="{{route("ourservice")}}">OurService</a>
+                        <a href="{{route("home_ourservice_get_data")}}">OurService</a>
                     </li>
                     <li>
-                        <a href="{{route('analysis')}}">Analysis</a>
+                        <a href="{{route('home_analysis_get_data')}}">Analysis</a>
                     </li>
                     <li>
-                        <a href="">OURSERVICE</a>
+                        <a href="{{route('home_choose_us_get_data')}}">Why choose us</a>
                     </li>
                     <li>
-                        <a href="">OURSERVICE</a>
+                        <a href="{{route('home_how_we_work_get_data')}}">How we Work</a>
                     </li>
                 </ul>
             </li>
@@ -34,7 +34,7 @@
                             src="{{ asset('asset/logo/minus.png') }}" alt="" srcset=""> </button></span>
                 <ul id="aboutmenu" class="d-none">
                     <li>
-                        <a href="">OURSERVICE</a>
+                        <a href="{{route('about_page_who_we_are_get_data')}}">who we are</a>
                     </li>
                     <li>
                         <a href="">OURSERVICE</a>

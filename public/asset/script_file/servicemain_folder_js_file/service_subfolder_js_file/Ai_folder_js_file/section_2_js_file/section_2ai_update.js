@@ -6,9 +6,12 @@ const image= formData.get('image')
 const title= formData.get('title')
 const id= formData.get('id')
 
-const description= nicEditors.findEditor('description').getContent();
+let description = nicEditors.findEditor('description').getContent();
+  description = description.replace(/<\/?(ul|ol)>/gi, '');
+  description = description.replace(/<span[^>]*>/gi, '').replace(/<\/span>/gi, '');
 const token=formData.get("_token")
-console.log(image,title,description,id);
+console.log(description);
+
 
 
 axios.post(`/ai_section_2_update_data/${id}`,

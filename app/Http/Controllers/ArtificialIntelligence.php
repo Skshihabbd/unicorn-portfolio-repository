@@ -54,6 +54,7 @@ class ArtificialIntelligence extends Controller
         $data = Ai_1_section::first();
 
 
+      try{
         if ($request->hasFile('image')) {
             $file = $request->file('image');
 
@@ -83,6 +84,14 @@ class ArtificialIntelligence extends Controller
                 return response()->json(['message' => 'Item updated successfully']);
             }
         }
+      }
+      catch (\Exception $e) {
+        return response()->json([
+            'success' => false,
+            'message' => 'somethings went wrong',
+            'databaseerror' => $e->getMessage()
+        ], 500);
+    }
     }
 
 
@@ -251,7 +260,8 @@ class ArtificialIntelligence extends Controller
         $description = $request->input('description');
 
 
-        $data = Ai_2_section::first();
+        try{
+            $data = Ai_2_section::first();
 
 
         if ($request->hasFile('image')) {
@@ -282,6 +292,16 @@ class ArtificialIntelligence extends Controller
 
                 return response()->json(['message' => 'Item updated successfully']);
             }
+        }
+        }
+        catch (\Exception $e) {
+
+           
+            return response()->json([
+                'success' => false,
+                'message' => 'somethings went wrong',
+                'databaseerror' => $e->getMessage()
+            ], 500);
         }
     }
 
